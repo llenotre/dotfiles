@@ -3,10 +3,8 @@ let g:rustfmt_autosave = 1
 call plug#begin()
 
 Plug 'rust-lang/rust.vim'
-
 Plug 'preservim/tagbar'
-
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sindrets/diffview.nvim'
 
 call plug#end()
 
