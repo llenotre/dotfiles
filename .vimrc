@@ -14,16 +14,20 @@ nmap <F8> :TagbarToggle<CR>
 set ttimeoutlen=10
 
 syntax on
-
-set autoindent
-set cursorline
 set hlsearch
-set noexpandtab
+
+set cursorline
 set number
 set ruler
+
+set autoindent
+set noexpandtab
 set shiftwidth=4
 set smartindent
 set tabstop=4
+
+set noerrorbells
+set visualbell
 
 autocmd BufRead *.c set colorcolumn=81
 autocmd BufRead *.[ch]pp set colorcolumn=121
@@ -36,6 +40,6 @@ autocmd BufRead *.yaml SetYaml
 
 function SetYaml()
 	set expandtab
-	set tabstop=2
 	set shiftwidth=2
+	set tabstop=2
 endfunction
