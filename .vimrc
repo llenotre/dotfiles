@@ -2,8 +2,9 @@ let g:rustfmt_autosave = 1
 
 call plug#begin()
 
-Plug 'rust-lang/rust.vim'
 Plug 'preservim/tagbar'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdtree'
 Plug 'sindrets/diffview.nvim'
 
 call plug#end()
@@ -27,7 +28,6 @@ set smartindent
 set tabstop=4
 
 set noerrorbells
-set visualbell
 
 autocmd BufRead *.c set colorcolumn=81
 autocmd BufRead *.[ch]pp set colorcolumn=121
@@ -43,3 +43,9 @@ function SetYaml()
 	set shiftwidth=2
 	set tabstop=2
 endfunction
+
+" NERDTree
+let NERDTreeShowHidden=1
+autocmd VimEnter * NERDTree | wincmd p
+nnoremap <C-y> :NERDTreeFocus<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
